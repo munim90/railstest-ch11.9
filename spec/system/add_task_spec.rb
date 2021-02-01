@@ -12,7 +12,7 @@ RSpec.describe "adding a new task" do
     :task, project: project, title: "Take Notes", size: 1,
            project_order: 3) }
 
-  it "can re-order a task", :js do
+  it "can re-order a task" do
     visit(project_path(project))
     find("#task_3")
     within("#task_3") do
