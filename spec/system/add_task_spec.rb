@@ -18,14 +18,13 @@ RSpec.describe "adding a new task" do
     within("#task_3") do
       click_on("Up")
     end
-    expect(page).to have_selector(
-      "tbody:nth-child(2) .name", text: "Take Notes")
+    expect(page).to have_selector("tbody:nth-child(2) .name", text: "Take Notes")
       #END:P1
       #START:P2
     visit(project_path(project))
     find("#task_2")
     within("#task_2") do
-      expect(page).to have_selector(".name", text: "Take Notes")
+      expect(page).to have_selector(".name", text: "Use Telescope")
     end
   end
 
